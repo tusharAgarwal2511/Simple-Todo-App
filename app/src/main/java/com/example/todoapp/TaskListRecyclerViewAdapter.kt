@@ -44,8 +44,6 @@ class TaskListRecyclerViewAdapter(private val context : Context, private val tas
 
         holder.binding.isDeleted.setOnCheckedChangeListener { compoundButton, b ->
 
-            Toast.makeText(context, "Deleting.....Please wait", Toast.LENGTH_SHORT).show()
-            Thread.sleep(1000)
             taskList.removeAt(position)
             notifyDataSetChanged()
 
